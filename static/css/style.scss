@@ -2911,7 +2911,12 @@ select {
     -moz-appearance: none;
     appearance: none;
 }
-
+.form-row select.form-control{
+    background: url("../img/select.png") calc(100% - 10px) center no-repeat;
+    &:active, &:focus{
+        color: #999;
+    }
+}
 
 
 
