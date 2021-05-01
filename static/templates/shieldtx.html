@@ -1,0 +1,107 @@
+{{define "specific"}}{{$cs := .CoinShortcut}}{{$tx := .Tx}}
+<div class="invoice-page clearfix">
+{{template "search_form"}}
+    <h1 class="h1-main">Shield Transaction</h1>
+
+    <div class="card">
+        <div class="card-body">
+            {{$tx.Txid}}
+        </div>
+    </div>
+
+    <div class="invoice-table card">
+        <div class="card-header">
+            <h6 class="card-title">Summary</h6>
+        </div>
+        <div class="card-body">
+            <div class="card-body__inner">
+                <div class="row double">
+                    <div class="col-md-6">
+                        <div class="table__oh">
+                            <table class="table data-table">
+                                <tbody>
+                                <tr>
+                                    <td style="width: 35%;">In Block</td>
+                                    <td class="data">{{- if $tx.Confirmations -}}<a href="/block/{{$tx.Blockheight}}">{{$tx.Blockheight}}</a>{{- else -}}Unconfirmed{{end}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Total Transparent Input</td>
+                                    <td class="data">{{formatAmount $tx.ValueInSat}} {{$cs}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Total Transparent Output</td>
+                                    <td class="data">{{formatAmount $tx.ValueOutSat}} {{$cs}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Fees</td>
+                                    <td class="data">{{formatAmount $tx.FeesSat}} {{$cs}}</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="table__oh">
+                            <table class="table data-table">
+                                <tbody>
+                                <tr>
+                                    <td style="width: 35%;">Time</td>
+                                    <td class="data">{{- if $tx.Blocktime -}}{{formatUnixTime $tx.Blocktime}}{{end}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Shield Notes Spent</td>
+                                    <td class="data">{{$tx.ShieldIns}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Shield Notes Minted</td>
+                                    <td class="data">{{ $tx.ShieldOuts}}</td>
+                                </tr>
+                                <tr title="Total value transferred to the SHIELD pool">
+                                    <td>Shield Supply Delta</td>
+                                    <td class="data">{{formatNegatedAmount $tx.ShieldValBal}} {{$cs}}</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="titlewrap">
+        <div>
+            <h3>Details</h3>
+        </div>
+    </div>
+    {{template "txdetail" .}}
+    <h3>Raw Transaction</h3>
+    <div class="card">
+        <div class="card-body">
+            <pre id="txSpecific"></pre>
+        </div>
+        <script type="text/javascript">
+            txSpecific = {{$tx.CoinSpecificJSON}};
+            function syntaxHighlight(json) {
+                json = JSON.stringify(json, undefined, 2);
+                json = json.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+                return json.replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g, function (match) {
+                    var cls = 'number';
+                    if (/^"/.test(match)) {
+                        if (/:$/.test(match)) {
+                            cls = 'key';
+                        } else {
+                            cls = 'string';
+                        }
+                    } else if (/true|false/.test(match)) {
+                        cls = 'boolean';
+                    } else if (/null/.test(match)) {
+                        cls = 'null';
+                    }
+                    return '<span class="' + cls + '">' + match + '</span>';
+                });
+            }
+            document.getElementById('txSpecific').innerHTML = syntaxHighlight(txSpecific);
+        </script>
+    </div>
+</div>
+{{end}}

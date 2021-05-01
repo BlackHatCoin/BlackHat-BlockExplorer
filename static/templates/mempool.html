@@ -1,0 +1,35 @@
+{{define "specific"}}{{$txs := .MempoolTxids.Mempool}}{{$data := .}}
+<div class="invoice-page clearfix">
+    {{template "search_form"}}
+    <h1 class="h1-main"><div>Mempool Transactions</div>&nbsp;<span>by first seen time</span></h1>
+    <div class="titlewrap">
+        <h5>{{$.MempoolTxids.MempoolSize}} Transactions in mempool</h5>
+        <nav>{{template "paging" $data }}</nav>
+    </div>
+    <div class="invoice-table card card_notitle">
+        <div class="card-body">
+            <div class="card-body__inner">
+                <div class="table__oh">
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th style="width: 70%;">Transaction</th>
+                            <th style="width: 30%;">First Seen Time</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {{- range $tx := $txs -}}
+                        <tr>
+                            <td class="ellipsis"><a href="/tx/{{$tx.Txid}}">{{$tx.Txid}}</a></td>
+                            <td>{{formatUnixTime $tx.Time}}</td>
+                        </tr>
+                        {{- end -}}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav>{{template "paging" $data }}</nav>
+</div>
+{{end}}

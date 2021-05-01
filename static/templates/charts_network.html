@@ -1,0 +1,25 @@
+{{define "specific" -}}{{$data := .ChartData}}
+<div class="invoice-page clearfix">
+{{template "search_form"}}
+    <h1 class="h1-main">
+        <div>Network Statistics</div>
+        <p class="text-center">Click on the legends to toggle individual data-sets.</p>
+    </h1>
+
+    <h3>Difficulty / Block Time</h3>
+    <p>Average block time (in seconds) and network difficulty over block number.</p>
+    {{template "canvas_blockrange" "canv_net_01"}}
+
+    <h3>Transactions / Block Size</h3>
+    <p>Average block size, average number of transactions per block and total number of transactions over block number.</p>
+    {{template "canvas_blockrange" "canv_net_02"}}
+
+    <h3>Fees</h3>
+    <p>Average fee per byte, amount of fees in block-range and total amount of burnt fees over block number.</p>
+    {{template "canvas_blockrange" "canv_net_03"}}
+</div>
+<script type="text/javascript">
+    network_data_Json = {{$data}}
+</script>
+<script src="../static/js/charts_network.js"></script>
+{{- end -}}

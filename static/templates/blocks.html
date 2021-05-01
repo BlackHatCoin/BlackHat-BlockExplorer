@@ -1,0 +1,43 @@
+{{define "specific"}}{{$blocks := .Blocks}}{{$data := .}}
+<div class="invoice-page clearfix">
+{{template "search_form"}}
+    <h1 class="h1-main">Blocks&nbsp;<span>by date</span></h1>
+
+    <div class="invoice-table card">
+
+        <div class="card-body">
+            <div class="card-body__inner">
+                {{if $blocks.Blocks -}}
+                <nav>{{template "paging" $data }}</nav>
+                <div class="table__oh">
+                    <table class="table table-striped data-table table-hover">
+                        <thead>
+                        <tr>
+                            <th style="width: 10%;">Height</th>
+                            <th style="width: 48%;">Hash</th>
+                            <th>Timestamp</th>
+                            <th class="text-right" title="number of Transactions in block"
+                                style="width: 10%;">TXs
+                            </th>
+                            <th class="text-right" title="size in Bytes" style="width: 10%;">Size</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {{- range $b := $blocks.Blocks -}}
+                        <tr>
+                            <td><a href="/block/{{$b.Height}}">{{$b.Height}}</a></td>
+                            <td class="ellipsis">{{$b.Hash}}</td>
+                            <td class="ellipsis">{{formatUnixTime $b.Time}}</td>
+                            <td class="text-right">{{$b.Txs}}</td>
+                            <td class="text-right">{{$b.Size}}</td>
+                        </tr>
+                        {{- end -}}
+                        </tbody>
+                    </table>
+                </div>
+                <nav>{{template "paging" $data }}</nav>
+            </div>
+        </div>
+    </div>
+</div>
+{{end}}{{end}}

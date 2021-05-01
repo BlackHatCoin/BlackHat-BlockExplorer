@@ -1,0 +1,17 @@
+{{define "specific" -}}{{$data := .ChartData}}
+<div class="invoice-page clearfix">
+{{template "search_form"}}
+    <h1 class="h1-main">
+        <div>Supply Statistics</div>
+        <p class="text-center">Click on the legends to toggle individual data-sets.</p>
+    </h1>
+
+    <h3>Shield Supply</h3>
+    <p>Total shield pool value (in BLKC) over block number.</p>
+    {{template "canvas_blockrange" "canv_supply"}}
+</div>
+<script type="text/javascript">
+    supply_data_Json = {{$data}}
+</script>
+<script src="../static/js/charts_supply.js"></script>
+{{- end -}}

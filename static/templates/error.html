@@ -1,0 +1,15 @@
+{{define "specific"}}
+<div class="invoice-page clearfix">
+{{template "search_form"}}
+    <h1 class="h1-main">
+        <div>Error</div>
+    </h1>
+    <div class="card">
+        <div class="card-body">
+            <div class="card-body__inner">
+                {{.Error.Text}}
+            </div>
+        </div>
+    </div>
+</div>
+{{- end -}}
