@@ -2632,6 +2632,51 @@ footer.footer {
 .invoice-page .invoice-table .table{
     table-layout: fixed;
 }
+.invoice-page .invoice-table .table_long{
+    table-layout: initial;
+    td{
+        &.preenabled{
+            color: #ddd;
+        }
+        &.enabled{
+            color: #42824c;
+        }
+        &.expired{
+            color: #953f3f;
+        }
+        &.vinspent{
+            color: #6a6767;
+        }
+        &.remove{
+            color: #665f44;
+        }
+    }
+    .ellipsis{
+        max-width: 250px;
+    }
+}
+.invoice-page .invoice-table.master_search{
+    width: 600px;
+    margin: 0 auto;
+    .card-body{
+        padding-top: 1.5rem;
+        input{
+            &::-webkit-input-placeholder {color:#999;}
+            &::-moz-placeholder          {color:#999;}/* Firefox 19+ */
+            &:-moz-placeholder           {color:#999;}/* Firefox 18- */
+            &:-ms-input-placeholder      {color:#999;}
+            &:focus{
+                color: #fff;
+            }
+            color: #fff;
+        }
+        .btn{
+            svg{
+                margin-right: 0;
+            }
+        }
+    }
+}
 .card-header {
     padding: 2.5rem 1.5rem;
 }
@@ -3092,6 +3137,9 @@ select {
         nav{
             width: 100%;
         }
+    }
+    .invoice-page .invoice-table.master_search {
+        width: 100%;
     }
 }
 @media only screen and (max-width: 600px) {
