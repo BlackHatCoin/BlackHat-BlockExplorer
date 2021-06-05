@@ -317,6 +317,7 @@ func (s *PublicServer) newTemplateData() *TemplateData {
         TOSLink:          api.Text.TOSLink,
         Hostname:         s.is.Host,
         IsCharts:         false,
+        CssJsTs:          s.chain.GetCssJsTs(),
     }
 }
 
@@ -436,6 +437,7 @@ type TemplateData struct {
     NonZeroBalanceTokens bool
     IsCharts             bool
     ChartData            string
+    CssJsTs              int
 }
 
 func (s *PublicServer) parseTemplates() []*template.Template {

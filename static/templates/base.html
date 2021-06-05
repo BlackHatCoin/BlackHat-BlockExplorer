@@ -16,7 +16,7 @@
     <meta property="og:url" content="https://{{.Hostname}}{{.RelativeURL}}" />
     <meta property="og:site_name" content="{{.CoinName}} Explorer" />
     <meta property="og:locale" content="en" />
-    <meta property="og:image" content="https://{{.Hostname}}/static/img/blackhat-og.jpg">
+    <meta property="og:image" content="https://{{.Hostname}}/static/img/blackhat-og.jpg?{{.CssJsTs}}">
     <meta property="og:image:alt" content="{{.CoinName}} Image" />
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@blkcoin">
@@ -24,9 +24,9 @@
 
     <title>{{.CoinName}} Explorer</title>
 
-    <link rel="apple-touch-icon" sizes="180x180" href="/static/img/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/static/img/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/static/img/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/img/apple-touch-icon.png?{{.CssJsTs}}">
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/img/favicon-32x32.png?{{.CssJsTs}}">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/img/favicon-16x16.png?{{.CssJsTs}}">
     <link rel="manifest" href="/static/img/site.webmanifest">
     <meta name="msapplication-TileColor" content="#b91d47">
     <meta name="theme-color" content="#ffffff">
@@ -142,9 +142,9 @@
     </style>
     <link href="https://fonts.googleapis.com/css?family=Muli:300,300i,400,400i,600,600i,700,700i|Comfortaa:300,400,500,700" rel="stylesheet">
     <!--common styles-->
-    <link rel="stylesheet" type="text/css" href="/static/css/vendors.css?2">
-    <link rel="stylesheet" type="text/css" href="/static/css/app.css?2">
-    <link rel="stylesheet" type="text/css" href="/static/css/style.css?2">
+    <link rel="stylesheet" type="text/css" href="/static/css/vendors.css?{{.CssJsTs}}">
+    <link rel="stylesheet" type="text/css" href="/static/css/app.css?{{.CssJsTs}}">
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css?{{.CssJsTs}}">
     <!--end common styles-->
 </head>
 <body class="vertical-layout vertical-compact-menu content-detached-right-sidebar menu-expanded fixed-navbar"
@@ -156,7 +156,7 @@
         <div class="navbar-container">
             <div class="collapse navbar-collapse topnav" id="navbar-mobile">
                 <a class="logo" href="/">
-                    <img class="brand-logo" alt="" src="/static/img/logo.png">
+                    <img class="brand-logo" alt="" src="/static/img/logo.png?{{.CssJsTs}}">
                 </a>
                 <ul class="nav navbar-nav navleft mr-auto float-left">
                     <li>
@@ -327,13 +327,13 @@
     </div>
 </footer>
 
-<script src="/static/js/vendors.min.js?2" type="text/javascript"></script>
-<script src="/static/js/app-menu.min.js?2" type="text/javascript"></script>
-<script src="/static/js/app.min.js?2" type="text/javascript"></script>
-<script src="/static/js/custom.js?2"></script>
+<script src="/static/js/vendors.min.js?{{.CssJsTs}}" type="text/javascript"></script>
+<script src="/static/js/app-menu.min.js?{{.CssJsTs}}" type="text/javascript"></script>
+<script src="/static/js/app.min.js?{{.CssJsTs}}" type="text/javascript"></script>
+<script src="/static/js/custom.js?{{.CssJsTs}}"></script>
 {{- if .IsCharts -}}
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
-<script src="/static/js/charts.js?2"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js?{{.CssJsTs}}"></script>
+<script src="/static/js/charts.js?{{.CssJsTs}}"></script>
 {{- end -}}
 </body>
 </html>

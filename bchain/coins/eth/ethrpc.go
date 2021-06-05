@@ -38,6 +38,7 @@ type Configuration struct {
 	BlockAddressesToKeep        int    `json:"block_addresses_to_keep"`
 	MempoolTxTimeoutHours       int    `json:"mempoolTxTimeoutHours"`
 	QueryBackendOnMempoolResync bool   `json:"queryBackendOnMempoolResync"`
+	CssJsTs                     int    `json:"css_js_ts"`
 }
 
 // EthereumRPC is an interface to JSON-RPC eth service.
@@ -293,6 +294,11 @@ func (b *EthereumRPC) GetCoinName() string {
 // GetSubversion returns empty string, ethereum does not have subversion
 func (b *EthereumRPC) GetSubversion() string {
 	return ""
+}
+
+// GetCssJsTs returns timestamp for handling static content version
+func (b *EthereumRPC) GetCssJsTs() int {
+	return b.ChainConfig.CssJsTs
 }
 
 // GetChainInfo returns information about the connected backend

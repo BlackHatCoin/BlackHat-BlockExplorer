@@ -57,6 +57,7 @@ type Configuration struct {
 	Slip44                       uint32 `json:"slip44,omitempty"`
 	AlternativeEstimateFee       string `json:"alternativeEstimateFee,omitempty"`
 	AlternativeEstimateFeeParams string `json:"alternativeEstimateFeeParams,omitempty"`
+	CssJsTs                      int    `json:"css_js_ts"`
 }
 
 // NewBitcoinRPC returns new BitcoinRPC instance.
@@ -185,6 +186,11 @@ func (b *BitcoinRPC) GetCoinName() string {
 // GetSubversion returns the backend subversion
 func (b *BitcoinRPC) GetSubversion() string {
 	return b.ChainConfig.Subversion
+}
+
+// GetCssJsTs returns timestamp for handling static content version
+func (b *BitcoinRPC) GetCssJsTs() int {
+	return b.ChainConfig.CssJsTs
 }
 
 // getblockhash
