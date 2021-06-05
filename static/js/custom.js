@@ -12,6 +12,46 @@ $(document).ready(function () {
     $('.menu_parent').click(function () {
         $(this).toggleClass('open');
     });
+
+    var chart = c3.generate({
+        bindto: '#chart',
+        data: {
+            columns: chart_mn_statuses,
+            type : 'donut'
+        },
+        donut: {
+            title: percent_enabled + "% ENABLED"
+        },
+        color: {
+            pattern: [
+                'rgb(69, 91, 58)',
+                'rgb(121, 115, 62)',
+                'rgb(125, 68, 40)',
+                'rgb(102, 33, 33)',
+                '#404040']
+        },
+        legend: {
+            padding: 20,
+            inset: {
+                anchor: 'top-left',
+                x: 10,
+                y: 0,
+                step: undefined
+            }
+        },
+        padding: {
+            bottom: 40
+        }
+    });
+    $(function () {
+        $(".dial").knob({
+            'readOnly': true,
+            'format': function (value) {
+                return value + '%';
+            },
+            'fgColor': '#3a9172'
+        });
+    });
 })
 
 $(window).on("load", function () {

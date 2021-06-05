@@ -2159,6 +2159,7 @@ html body .content .content-wrapper{
             -moz-user-select: none;
             -ms-user-select: none;
             user-select: none;
+            pointer-events: none;
         }
         .la{
             position: absolute;
@@ -2962,6 +2963,83 @@ select {
         color: #999;
     }
 }
+.grid_13{
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1.5fr;
+    grid-gap: 15px;
+    margin-bottom: 40px;
+    .add_node {
+        width: auto;
+        .c3-legend-item {
+            font-size: 14px;
+            fill: #999;
+            margin-right: 10px;
+        }
+        .c3-chart-arcs{
+            fill: #ddd;
+        }
+    }
+    .form-label-group{
+        .invoice-amount{
+            &:first-child{
+                margin-bottom: 10px;
+            }
+        }
+    }
+    .invoice-amount{
+        padding: 0;
+        text-align: center;
+    }
+}
+.inline-link{
+    text-decoration: underline;
+    transition: $transition;
+    &:hover{
+        color: #fff;
+    }
+}
+.faq-body{
+    .card-title{
+        transition: $transition;
+        &:hover{
+            color: #fff;
+        }
+        img{
+            transition: $transition;
+            margin-right: 10px;
+            margin-top: 2px;
+        }
+        &:not(.collapsed){
+            img{
+                transform: rotate(180deg);
+            }
+        }
+    }
+    .form-label-group {
+        margin-bottom: 0;
+        &:first-child{
+            .card-header{
+                padding-top: 0;
+            }
+        }
+    }
+    .card-header .card-title{
+        align-items: flex-start;
+    }
+
+}
+.coin-table__row_chart div input {
+    margin-top: 44px !important;
+    color: rgb(58, 145, 114) !important;
+}
+.coin-table__row_chart .chart-dash__text {
+    transform: translateY(-60px);
+    color: rgb(58, 145, 114) !important;
+}
+.grid_13 {
+    grid-template-columns: 1.2fr 1fr 1.5fr;
+
+}
 
 
 
@@ -2973,6 +3051,11 @@ select {
 @media only screen and (max-width: 1300px) {
     .vertical-layout .navbar.header-navbar .navbar-wrapper, .vertical-layout .app-content.content, .vertical-layout .footer.footer-static {
         width: 100%;
+    }
+    .grid_13 {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+
     }
 }
 
@@ -3141,6 +3224,12 @@ select {
     .invoice-page .invoice-table.master_search {
         width: 100%;
     }
+    .grid_13{
+        .collapse:not(.show) {
+            display: none;
+        }
+    }
+
 }
 @media only screen and (max-width: 600px) {
     .card_min {
