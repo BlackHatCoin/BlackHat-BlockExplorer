@@ -2632,6 +2632,9 @@ footer.footer {
 }
 .invoice-page .invoice-table .table{
     table-layout: fixed;
+    &.fluid{
+        table-layout: auto;
+    }
 }
 .invoice-page .invoice-table .table_long{
     table-layout: initial;
@@ -2963,11 +2966,24 @@ select {
         color: #999;
     }
 }
+.inline-link_invest{
+    padding-top: 10px;
+    display: inline-block;
+}
+.add_node .card-header h6 span{
+    font-size: 12px;
+    display: inline-block;
+    line-height: 12px;
+    transform: translateY(-4px);
+}
 .grid_13{
     display: grid;
-    grid-template-columns: 1.2fr 1fr 1.5fr;
+    grid-template-columns: 1.2fr 1fr 1fr 1.5fr;
     grid-gap: 15px;
     margin-bottom: 40px;
+    .card-header{
+        padding-top: 35px;
+    }
     .add_node {
         width: auto;
         .c3-legend-item {
@@ -2982,13 +2998,22 @@ select {
     .form-label-group{
         .invoice-amount{
             &:first-child{
-                margin-bottom: 10px;
+                margin-bottom: 20px;
+            }
+            b{
+                display: block;
+                color: #b5b5b5;
+                font-size: 21px;
+                padding-left: 0;
             }
         }
     }
     .invoice-amount{
         padding: 0;
         text-align: center;
+    }
+    .coin-table__row_chart{
+        margin-bottom: 25px;
     }
 }
 .inline-link{
@@ -3037,9 +3062,157 @@ select {
     color: rgb(58, 145, 114) !important;
 }
 .grid_13 {
-    grid-template-columns: 1.2fr 1fr 1.5fr;
-
+    grid-template-columns: 1.2fr 1fr 1fr 1.5fr;
+    .add_node.card{
+        margin: 0;
+    }
 }
+.card-body.card-body_nop{
+    padding: 1.5rem 0;
+    .form-label-group{
+        .invoice-amount:last-child{
+            margin-bottom: 0;
+        }
+    }
+}
+.card-body.card-body_chart, .card-body.card-body_nop{
+    .invoice-amount.datetime{
+        margin-bottom: 0;
+    }
+}
+.gov-tab{
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #575B62;
+    margin-bottom: 30px;
+    &__item{
+        padding: 12px 25px;
+        transition: all 0.2s ease-in-out;
+        display: flex;
+        align-items: center;
+        border-top-left-radius: 0.25rem;
+        border-top-right-radius: 0.25rem;
+        margin-bottom: -1px;
+        font-size: 16px;
+        &:hover{
+            color: #fff;
+        }
+        &_act{
+            background: -moz-linear-gradient(top,  rgba(0,0,0,1) 0%, rgba(125,185,232,0) 100%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(top,  rgba(0,0,0,1) 0%,rgba(125,185,232,0) 100%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to bottom,  rgba(0,0,0,1) 0%,rgba(125,185,232,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#007db9e8',GradientType=0 ); /* IE6-9 */
+
+            border: 1px solid #575B62;
+            border-bottom-color: transparent;
+            color: #fff;
+            font-size: 18px;
+        }
+    }
+}
+.card-body_empty{
+    padding-top: 1.5rem !important;
+    .table{
+        margin-bottom: 0;
+    }
+}
+.vam{
+    vertical-align: middle !important;
+}
+.val{
+    &_bhc{
+        span{
+            font-weight: bolder;
+            color: #d7d7d7;
+        }
+    }
+    &_rub{
+        span{
+            font-weight: bolder;
+            color: #d7d7d7;
+        }
+    }
+    &_perc{
+
+    }
+    &_par{
+
+    }
+}
+.ttu{
+    text-transform: uppercase;
+}
+.grid_12 {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-gap: 15px;
+    margin-bottom: 40px;
+    .val_bhc, .val_rub{
+        font-size: 18px;
+    }
+    .card{
+        margin-bottom: 0;
+    }
+}
+.title-center{
+    justify-content: center;
+    text-align: center;
+}
+.countdown_center{
+    justify-content: center;
+    li{
+        padding: 0 15px;
+        span {
+            line-height: 21px;
+        }
+    }
+}
+.grid_13_full{
+    grid-template-columns: 1fr;
+}
+td.enabled {
+    color: #42824c;
+}
+td.expired {
+    color: #953f3f;
+}
+.note-line.long-line{
+    margin-top: 10px;
+    display: block;
+}
+.btn_min{
+    display: inline-block;
+    text-decoration: none !important;
+    padding: 6px 13px;
+}
+.status-mark{
+    text-transform: uppercase;
+    font-size: 11px;
+}
+.status-pers{
+    padding-top: 10px;
+    div{
+        text-transform: none;
+        font-size: 12px;
+    }
+}
+.grid_center{
+    display: grid;
+    grid-gap: 15px;
+    margin-bottom: 40px;
+    grid-template-columns: 1fr 1fr;
+    //justify-items: end;
+    .card{
+        width: 320px;
+        margin-bottom: 0;
+        &:first-child{
+            justify-self: end;
+        }
+    }
+}
+
+
+
 
 
 
@@ -3053,9 +3226,24 @@ select {
         width: 100%;
     }
     .grid_13 {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
-
+        grid-template-areas:
+            "chart cnob cnob2"
+            "faq faq faq";
+        .card:nth-child(1) {
+            grid-area: chart;
+        }
+        .card:nth-child(2) {
+            grid-area: cnob;
+        }
+        .card:nth-child(3) {
+            grid-area: cnob2;
+        }
+        .card:nth-child(4) {
+            grid-area: faq;
+            width: 600px;
+            justify-self: center;
+        }
+        grid-template-columns: auto;
     }
 }
 
@@ -3187,6 +3375,30 @@ select {
             }
         }
     }
+    .grid_12{
+        grid-template-areas:
+            "info_1 info_2"
+            "count count";
+        .card:nth-child(1) {
+            grid-area: info_1;
+        }
+        .card:nth-child(2) {
+            grid-area: count;
+        }
+        .card:nth-child(3) {
+            grid-area: info_2;
+        }
+        grid-template-columns: auto;
+    }
+    .grid_13 {
+        grid-template-areas:
+            "chart chart"
+            "cnob cnob2"
+            "faq faq";
+        .card:nth-child(4) {
+            width: 100%;
+        }
+    }
 }
 
 
@@ -3229,11 +3441,31 @@ select {
             display: none;
         }
     }
-
+    .grid_13 {
+        grid-template-areas:
+            "chart"
+            "cnob"
+            "cnob2"
+            "faq";
+    }
+    .grid_center{
+        display: grid;
+        grid-gap: 15px;
+        margin-bottom: 40px;
+        grid-template-columns: 1fr;
+        //justify-items: end;
+        .card{
+            width: 100%;
+            margin-bottom: 0;
+        }
+    }
 }
 @media only screen and (max-width: 600px) {
     .card_min {
         width: 100%;
+    }
+    .grid_12 .val_bhc, .grid_12 .val_rub {
+        font-size: 15px;
     }
 }
 @media only screen and (max-width: 480px) {
@@ -3257,6 +3489,12 @@ select {
         .card-body {
             padding: 25px;
         }
+    }
+    .grid_12 {
+        grid-template-areas:
+            "info_1"
+            "info_2"
+            "count";
     }
 }
 
