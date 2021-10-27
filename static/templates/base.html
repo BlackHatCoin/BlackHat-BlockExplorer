@@ -157,48 +157,37 @@
             <div class="collapse navbar-collapse topnav" id="navbar-mobile">
                 <a class="logo" href="/">
                     <img class="brand-logo" alt="" src="/static/img/logo.png?{{.CssJsTs}}">
+                    <span>explorer</span>
                 </a>
                 <ul class="nav navbar-nav navleft mr-auto float-left">
                     <li>
                         <a class="menu menu_bl" href="/blocks">
-                            <svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="cubes" role="img"
-                                 xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 512 512">
-                                <path fill="currentColor"
-                                      d="M488.6 256.7L388 219V107.9c0-15-9.3-28.4-23.4-33.7l-96-36c-8.1-3.1-17.1-3.1-25.3 0l-96 36c-14.1 5.3-23.4 18.7-23.4 33.7V219L23.4 256.7C9.3 262 0 275.4 0 290.4v101.3c0 13.6 7.7 26.1 19.9 32.2l96 48c10.1 5.1 22.1 5.1 32.2 0L256 418l107.9 54c10.1 5.1 22.1 5.1 32.2 0l96-48c12.2-6.1 19.9-18.6 19.9-32.2V290.4c0-15-9.3-28.4-23.4-33.7zM16.5 403.8V295.1l107.2 46.5v115.8zm231 0l-107.2 53.6V341.6l107.2-46.5zm0-126.7l-115.5 50-115.5-50v-.2L131 234l107.6 39.6 8.9 3.3zm.3-19.7L195 239.6l-54.5-20.4V112.5L247.8 159zM140.5 94.5v-.1L256 51l115.5 43.3v.2l-115.5 50zM264.2 159l107.2-46.5v106.7L317 239.6l-52.8 17.8zm107.6 298.4l-107.2-53.6V295.1l107.2 46.5zm123.7-53.6l-107.2 53.6V341.6l107.2-46.5zm0-126.7l-115.5 50L264.5 277v-.2l8.9-3.3L381 234l114.5 42.9z"
-                                      class=""></path>
+                            <svg>
+                                <use xlink:href="/static/img/sprite.svg?{{.CssJsTs}}#icon-cubes"></use>
                             </svg>
                             Blocks
                         </a>
                     </li>
                     <li>
                         <a class="menu menu_pur" href="/masternodes">
-                            <svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="network-wired"
-                                 role="img" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 640 512">
-                                <path fill="currentColor"
-                                      d="M632 240H336v-80h80c17.67 0 32-14.33 32-32V32c0-17.67-14.33-32-32-32H224c-17.67 0-32 14.33-32 32v96c0 17.67 14.33 32 32 32h80v80H8c-4.42 0-8 3.58-8 8v16c0 4.42 3.58 8 8 8h120v80H64c-17.67 0-32 14.33-32 32v96c0 17.67 14.33 32 32 32h160c17.67 0 32-14.33 32-32v-96c0-17.67-14.33-32-32-32h-64v-80h320v80h-64c-17.67 0-32 14.33-32 32v96c0 17.67 14.33 32 32 32h160c17.67 0 32-14.33 32-32v-96c0-17.67-14.33-32-32-32h-64v-80h120c4.42 0 8-3.58 8-8v-16c0-4.42-3.58-8-8-8zM224 384v96H64v-96h160zm0-256V32h192v96H224zm352 256v96H416v-96h160z"
-                                      class=""></path>
+                            <svg>
+                                <use xlink:href="/static/img/sprite.svg?{{.CssJsTs}}#icon-network-wired"></use>
                             </svg>
                             Masternodes
                         </a>
                     </li>
                     <li>
                         <a class="menu menu_cla" href="/governance">
-                            <svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="clipboard-list-check"
-                                 role="img" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 384 512">
-                                <path fill="currentColor"
-                                      d="M336 64h-88.6c.4-2.6.6-5.3.6-8 0-30.9-25.1-56-56-56s-56 25.1-56 56c0 2.7.2 5.4.6 8H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zM192 32c13.3 0 24 10.7 24 24s-10.7 24-24 24-24-10.7-24-24 10.7-24 24-24zm160 432c0 8.8-7.2 16-16 16H48c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16h48v20c0 6.6 5.4 12 12 12h168c6.6 0 12-5.4 12-12V96h48c8.8 0 16 7.2 16 16v352zM112 328c-13.3 0-24 10.7-24 24s10.7 24 24 24 24-10.7 24-24-10.7-24-24-24zm168 8H168c-4.4 0-8 3.6-8 8v16c0 4.4 3.6 8 8 8h112c4.4 0 8-3.6 8-8v-16c0-4.4-3.6-8-8-8zm-153.8-65.6l64.2-63.6c2.1-2.1 2.1-5.5 0-7.6l-12.6-12.7c-2.1-2.1-5.5-2.1-7.6 0l-47.6 47.2-20.6-20.9c-2.1-2.1-5.5-2.1-7.6 0l-12.7 12.6c-2.1 2.1-2.1 5.5 0 7.6l37.1 37.4c1.9 2.1 5.3 2.1 7.4 0zM280 240h-77.6l-32.3 32H280c4.4 0 8-3.6 8-8v-16c0-4.4-3.6-8-8-8z"
-                                      class=""></path>
+                            <svg>
+                                <use xlink:href="/static/img/sprite.svg?{{.CssJsTs}}#icon-clipboard-list-check"></use>
                             </svg>
                             Governance
                         </a>
                     </li>
                     <li class="menu_parent">
                         <div class="menu-sub">
-                            <svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="info-circle"
-                                 role="img" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 512 512">
-                                <path fill="currentColor"
-                                      d="M504 416H32V72c0-4.42-3.58-8-8-8H8c-4.42 0-8 3.58-8 8v360c0 8.84 7.16 16 16 16h488c4.42 0 8-3.58 8-8v-16c0-4.42-3.58-8-8-8zM98.34 263.03c-3.12 3.12-3.12 8.19 0 11.31l11.31 11.31c3.12 3.12 8.19 3.12 11.31 0l72.69-72.01 84.69 84.69c6.25 6.25 16.38 6.25 22.63 0l93.53-93.53 44.04 44.04c4.95 4.95 11.03 7.16 17 7.16 12.48 0 24.46-9.7 24.46-24.34V112.19c0-8.94-7.25-16.19-16.19-16.19H344.34c-21.64 0-32.47 26.16-17.17 41.46l44.71 44.71-82.22 82.22-84.63-84.63c-6.23-6.23-16.32-6.25-22.57-.05l-84.12 83.32zM362.96 128H448v85.04L362.96 128z"
-                                      class=""></path>
+                            <svg>
+                                <use xlink:href="/static/img/sprite.svg?{{.CssJsTs}}#icon-chart-line"></use>
                             </svg>
                             Charts
                         </div>
@@ -209,22 +198,16 @@
                     </li>
                     <li>
                         <a class="menu menu_cla" href="/status">
-                            <svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="info-circle"
-                                 role="img" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 512 512">
-                                <path fill="currentColor"
-                                      d="M256 40c118.621 0 216 96.075 216 216 0 119.291-96.61 216-216 216-119.244 0-216-96.562-216-216 0-119.203 96.602-216 216-216m0-32C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm-36 344h12V232h-12c-6.627 0-12-5.373-12-12v-8c0-6.627 5.373-12 12-12h48c6.627 0 12 5.373 12 12v140h12c6.627 0 12 5.373 12 12v8c0 6.627-5.373 12-12 12h-72c-6.627 0-12-5.373-12-12v-8c0-6.627 5.373-12 12-12zm36-240c-17.673 0-32 14.327-32 32s14.327 32 32 32 32-14.327 32-32-14.327-32-32-32z"
-                                      class=""></path>
+                            <svg>
+                                <use xlink:href="/static/img/sprite.svg?{{.CssJsTs}}#icon-info-circle"></use>
                             </svg>
                             Status
                         </a>
                     </li>
                     <li>
                         <a class="menu menu_cla" href="/sendtx">
-                            <svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="share" role="img"
-                                 xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 576 512">
-                                <path fill="currentColor"
-                                      d="M564.907 196.35L388.91 12.366C364.216-13.45 320 3.746 320 40.016v88.154C154.548 130.155 0 160.103 0 331.19c0 94.98 55.84 150.231 89.13 174.571 24.233 17.722 58.021-4.992 49.68-34.51C100.937 336.887 165.575 321.972 320 320.16V408c0 36.239 44.19 53.494 68.91 27.65l175.998-184c14.79-15.47 14.79-39.83-.001-55.3zm-23.127 33.18l-176 184c-4.933 5.16-13.78 1.73-13.78-5.53V288c-171.396 0-295.313 9.707-243.98 191.7C72 453.36 32 405.59 32 331.19 32 171.18 194.886 160 352 160V40c0-7.262 8.851-10.69 13.78-5.53l176 184a7.978 7.978 0 0 1 0 11.06z"
-                                      class=""></path>
+                            <svg>
+                                <use xlink:href="/static/img/sprite.svg?{{.CssJsTs}}#icon-share"></use>
                             </svg>
                             Send-TX
                         </a>
@@ -249,24 +232,8 @@
 
 <div class="app-content content">
     <div class="preload vis">
-        <svg class="jump" width="150" height="150" viewBox="0 0 958 688" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <g clip-path="url(#clip0)">
-                <path d="M368.859 110.93C368.859 110.93 324.419 112.93 281.349 110.93C240.349 109 220.289 116.73 204.559 127.72C191.839 136.59 172.069 153.24 164.729 187.51C157.389 221.78 168.829 294.87 168.829 294.87L185.599 416.87L210.399 547.8C210.399 547.8 355.499 549.86 489.279 496.35C623.059 442.84 769.189 329.27 769.189 329.27C769.189 329.27 768.709 325.1 766.659 307.61C764.609 290.12 750.659 231.88 725.969 181.46C701.279 131.04 674.999 73.6296 631.289 36.3596C583.999 -4.00045 581.569 -3.18045 529.569 10.9995C521.239 13.2695 515.459 14.4295 470.979 48.4195C459.269 57.3795 420.329 95.9995 420.329 95.9995C420.329 95.9995 405.339 108.34 368.859 110.93Z" fill="black"/>
-                <path d="M202.62 456.09C202.62 456.09 135.27 466.52 67.3495 490.18C-0.570457 513.84 2.51954 547.82 2.51954 547.82C2.51954 547.82 1.76954 570.43 35.4495 601.33C66.7095 630 179.06 711.05 358.58 677.48C485.4 653.76 577.75 583.48 577.75 583.48C666.4 513 731.64 438.58 803.89 407.73C853.76 386.43 900.559 366.58 925.109 342.45C941.449 326.4 966.169 291.39 948.419 253.87C931.279 217.6 897.74 204.33 850.03 215.39C802.32 226.45 740.78 265.08 740.78 265.08L202.62 456.09Z" fill="black" stroke="black" stroke-width="5" stroke-miterlimit="10"/>
-                <path d="M769.19 296.72C769.19 296.72 832.7 248.92 867.82 243.72C897.6 239.31 914.82 244.72 921.82 247.01C953.15 257.01 966.66 284.25 929.95 336.4C918.56 352.58 861.49 381.2 836.18 393.8C735.04 444.15 745.05 413.46 624.06 476.65C591.22 493.81 491.41 532.37 411 540.85C292.33 553.37 210.42 547.85 210.42 547.85C210.42 547.85 386.42 537.08 438.92 511.85C491.42 486.62 634.13 422 665 394.56C695.87 367.12 769.19 296.72 769.19 296.72Z" fill="black"/>
-                <path d="M202.62 456.09C202.62 456.09 135.27 466.52 67.3495 490.18C-0.570457 513.84 2.51954 547.82 2.51954 547.82C2.51954 547.82 1.76954 570.43 35.4495 601.33C66.7095 630 179.06 711.05 358.58 677.48C485.4 653.76 577.75 583.48 577.75 583.48C666.4 513 731.64 438.58 803.89 407.73C853.76 386.43 900.559 366.58 925.109 342.45C941.449 326.4 966.169 291.39 948.419 253.87C931.279 217.6 897.74 204.33 850.03 215.39C802.32 226.45 740.78 265.08 740.78 265.08L202.62 456.09Z" stroke="white" stroke-width="5" stroke-miterlimit="10"/>
-                <path d="M251.999 127.68C230.119 141.99 214.509 170.68 207.789 188.22C205.789 193.52 202.979 204.73 214.519 209.93C226.059 215.13 352.409 181.69 387.299 160.93C447.149 125.39 476.609 71.4802 490.369 55.0402C524.879 13.8302 564.999 2.66016 564.999 2.66016C564.999 2.66016 546.289 3.00016 519.909 14.4902C508.599 19.4202 495.909 27.6502 482.639 36.7202C434.399 69.8102 440.229 85.7202 410.029 100.39C380.029 114.95 331.759 110.79 315.669 111.77C274.769 114.26 265.999 118.49 251.999 127.68Z" fill="black"/>
-                <path d="M551.72 11.459C543.47 17.409 527.09 30.609 493.9 86.219C485.75 99.859 456.15 150.659 404.16 183.459C361.56 210.329 295.58 220.649 284.59 226.139C269.42 233.709 257.71 242.209 265.2 296.449C272.69 350.689 285.77 418.999 285.77 418.999C285.77 418.999 454.56 419.929 479.12 412.449C503.68 404.969 684.1 389.999 701.43 377.999C718.76 365.999 769.19 329.279 769.19 329.279C769.19 329.279 764.47 241.979 696.81 121.879C685.97 102.629 674.81 83.119 660.19 65.319C643.51 44.999 622.8 26.919 602.36 12.799C578.79 -3.49096 565.67 1.40904 551.72 11.459Z" fill="black"/>
-                <path d="M185.6 416.88L210.4 547.81C210.4 547.81 313.23 545 364 534.74C442 519 505.51 491.17 549.4 469C620.23 433.22 704.4 372.93 704.4 372.93C704.4 372.93 549.94 402.81 511.79 406.88C473.64 410.95 342.35 418.35 285.79 418.97C260.72 419.24 185.6 416.88 185.6 416.88Z" fill="white"/>
-                <path d="M368.859 110.93C368.859 110.93 324.419 112.93 281.349 110.93C240.349 109 220.289 116.73 204.559 127.72C191.839 136.59 172.069 153.24 164.729 187.51C157.389 221.78 168.829 294.87 168.829 294.87L185.599 416.87L210.399 547.8C210.399 547.8 355.499 549.86 489.279 496.35C623.059 442.84 769.189 329.27 769.189 329.27C769.189 329.27 768.709 325.1 766.659 307.61C764.609 290.12 750.659 231.88 725.969 181.46C701.279 131.04 674.999 73.6302 631.289 36.3602C583.999 -3.99981 568.279 -0.269815 540.439 7.37018C478.529 24.3702 433.509 87.0002 420.329 96.0002C407.149 105 405.339 108.34 368.859 110.93Z" stroke="white" stroke-width="5" stroke-miterlimit="10"/>
-            </g>
-            <defs>
-                <clipPath id="clip0">
-                    <rect width="957.07" height="687.99" fill="white"/>
-                </clipPath>
-            </defs>
-        </svg>
-
+        <img class="jump" src="data:image/jpeg;base64,/9j/4QAYRXhpZgAASUkqAAgAAAAAAAAAAAAAAP/sABFEdWNreQABAAQAAABZAAD/4QMvaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLwA8P3hwYWNrZXQgYmVnaW49Iu+7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/PiA8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29yZSA1LjYtYzE0NSA3OS4xNjM0OTksIDIwMTgvMDgvMTMtMTY6NDA6MjIgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDQyAyMDE5IChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpDMzRFODVGQzJBQzYxMUVDOTI1NUZDRURBRTVDN0IzMiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpDMzRFODVGRDJBQzYxMUVDOTI1NUZDRURBRTVDN0IzMiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkMzNEU4NUZBMkFDNjExRUM5MjU1RkNFREFFNUM3QjMyIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkMzNEU4NUZCMkFDNjExRUM5MjU1RkNFREFFNUM3QjMyIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+/+4ADkFkb2JlAGTAAAAAAf/bAIQAAQEBAQEBAQEBAQIBAQEC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"
+                 alt="">
         <div class="shadow"></div>
     </div>
     <!--block to reload-->
@@ -285,35 +252,28 @@
         <a href="https://forum.blackhatco.in/">Forum</a>
         <div class="soc">
             <a href="https://twitter.com/blkcoin">
-                <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="twitter" role="img"
-                     xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 512 512">
-                    <path fill="currentColor"
-                          d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"
-                          class=""></path>
+                <svg>
+                    <use xlink:href="/static/img/sprite.svg?{{.CssJsTs}}#icon-tw"></use>
                 </svg>
             </a>
             <a href="https://t.me/BlackHatCoin">
-                <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="telegram-plane" role="img"
-                     xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 448 512">
-                    <path fill="currentColor"
-                          d="M446.7 98.6l-67.6 318.8c-5.1 22.5-18.4 28.1-37.3 17.5l-103-75.9-49.7 47.8c-5.5 5.5-10.1 10.1-20.7 10.1l7.4-104.9 190.9-172.5c8.3-7.4-1.8-11.5-12.9-4.1L117.8 284 16.2 252.2c-22.1-6.9-22.5-22.1 4.6-32.7L418.2 66.4c18.4-6.9 34.5 4.1 28.5 32.2z"
-                          class=""></path>
+                <svg>
+                    <use xlink:href="/static/img/sprite.svg?{{.CssJsTs}}#icon-tele"></use>
                 </svg>
             </a>
             <a href="https://blackhatco.in/discord">
-                <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="discord" role="img"
-                     xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 448 512">
-                    <path fill="currentColor"
-                          d="M297.216 243.2c0 15.616-11.52 28.416-26.112 28.416-14.336 0-26.112-12.8-26.112-28.416s11.52-28.416 26.112-28.416c14.592 0 26.112 12.8 26.112 28.416zm-119.552-28.416c-14.592 0-26.112 12.8-26.112 28.416s11.776 28.416 26.112 28.416c14.592 0 26.112-12.8 26.112-28.416.256-15.616-11.52-28.416-26.112-28.416zM448 52.736V512c-64.494-56.994-43.868-38.128-118.784-107.776l13.568 47.36H52.48C23.552 451.584 0 428.032 0 398.848V52.736C0 23.552 23.552 0 52.48 0h343.04C424.448 0 448 23.552 448 52.736zm-72.96 242.688c0-82.432-36.864-149.248-36.864-149.248-36.864-27.648-71.936-26.88-71.936-26.88l-3.584 4.096c43.52 13.312 63.744 32.512 63.744 32.512-60.811-33.329-132.244-33.335-191.232-7.424-9.472 4.352-15.104 7.424-15.104 7.424s21.248-20.224 67.328-33.536l-2.56-3.072s-35.072-.768-71.936 26.88c0 0-36.864 66.816-36.864 149.248 0 0 21.504 37.12 78.08 38.912 0 0 9.472-11.52 17.152-21.248-32.512-9.728-44.8-30.208-44.8-30.208 3.766 2.636 9.976 6.053 10.496 6.4 43.21 24.198 104.588 32.126 159.744 8.96 8.96-3.328 18.944-8.192 29.44-15.104 0 0-12.8 20.992-46.336 30.464 7.68 9.728 16.896 20.736 16.896 20.736 56.576-1.792 78.336-38.912 78.336-38.912z"
-                          class=""></path>
+                <svg>
+                    <use xlink:href="/static/img/sprite.svg?{{.CssJsTs}}#icon-discord"></use>
+                </svg>
+            </a>
+            <a href="https://weibo.com/u/7624298845">
+                <svg>
+                    <use xlink:href="/static/img/sprite.svg?{{.CssJsTs}}#icon-weibo"></use>
                 </svg>
             </a>
             <a href="https://github.com/BlackHatCoin">
-                <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github" role="img"
-                     xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 496 512">
-                    <path fill="currentColor"
-                          d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
-                          class=""></path>
+                <svg>
+                    <use xlink:href="/static/img/sprite.svg?{{.CssJsTs}}#icon-git"></use>
                 </svg>
             </a>
         </div>
