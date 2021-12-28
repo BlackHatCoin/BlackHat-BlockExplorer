@@ -17,7 +17,7 @@
             <div class="card-body__inner">
                 <div class="">
                     <div class="data-div row">
-                        <div class="col-md-10">
+                        <div class="col-md-9">
                             <table class="table data-table">
                                 <tbody>
                                 {{- if eq .ChainType 1 -}}
@@ -82,11 +82,21 @@
                                 </tbody>
                             </table>
                         </div>
-                        <div class="col-md-2">
-                            <div id="qrcode" style="width: 160px; height: 160px; background-color: white; padding: 5px;"></div>
-                            <script type="text/javascript" src="/static/js/qrcode.min.js?{{.CssJsTs}}"></script>
+                        <div class="col-md-3">
+                            <div id="qrcode" class="qrcode"></div>
+                            <script type="text/javascript" src="/static/js/easy.qrcode.min.js?{{.CssJsTs}}"></script>
                             <script type="text/javascript">
-                                new QRCode(document.getElementById("qrcode"), { text: "{{$addr.AddrStr}}", width: 150, height: 150 });
+                                new QRCode(document.getElementById("qrcode"), {
+                                    text: "{{$addr.AddrStr}}",
+                                    width: 150,
+                                    height: 150,
+                                    quietZone: 5,
+                                    correctLevel : QRCode.CorrectLevel.H,
+                                    logo: '/img/logo50.png',
+                                    logoWidth: 40,
+                                    logoHeight: 40,
+                                    logoBackgroundTransparent: true,
+                                });
                             </script>
                         </div>
                     </div>

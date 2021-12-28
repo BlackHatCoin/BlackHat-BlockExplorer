@@ -2833,11 +2833,7 @@ pre {
 .tx-out .tx-own .tx-amt, .text-success {
     color: #329B76 !important;
 }
-#qrcode{
-    img{
-        width: 100%;
-    }
-}
+
 select.form-control, textarea.form-control{
     color: #999;
 }
@@ -2998,6 +2994,16 @@ select {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+
+}
+.titlewrap{
+    select{
+        -webkit-appearance: auto;
+        -moz-appearance: auto;
+        appearance: auto;
+        background: #000;
+        border: 1px solid #999;
+    }
 }
 .form-row select.form-control{
     background: url("../img/select.png") calc(100% - 10px) center no-repeat;
@@ -3322,6 +3328,52 @@ td.expired {
         font-size: 10px;
     }
 }
+.btn svg {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    fill: #919191;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+.btn:hover svg, .btn:focus svg {
+    fill: #fff;
+}
+.qrcode{
+    display: flex;
+    justify-content: center;
+    canvas{
+        max-width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
